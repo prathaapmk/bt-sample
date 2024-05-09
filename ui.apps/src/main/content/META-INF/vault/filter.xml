@@ -2,5 +2,7 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/bt-sample-project/clientlibs"/>
     <filter root="/apps/bt-sample-project/components"/>
+    <filter root="/apps/bt-sample-project/pages"/>
+    <filter root="/apps/bt-sample-project/static-templates"/>
     <filter root="/apps/bt-sample-project/i18n"/>
 </workspaceFilter>
