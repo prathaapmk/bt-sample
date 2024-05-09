@@ -303,6 +303,45 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_1574694950110 jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)." jcr:primaryType="nt:unstructured" jcr:title="Page Root" sling:resourceType="wcm/core/components/policy/policy" components="[group:bt-practice - Content,/apps/bt-sample-project/components/form/container,group:bt-practice - Structure]">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+<cq:authoring jcr:primaryType="nt:unstructured">
+<assetToComponentMapping jcr:primaryType="nt:unstructured">
+<mapping_1575024218483 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="image/*" droptarget="image" resourceType="bt-sample-project/components/image"/>
+<mapping_1575030843388 jcr:primaryType="nt:unstructured" assetGroup="content" assetMimetype="text/html" droptarget="experiencefragment" resourceType="bt-sample-project/components/experiencefragment"/>
+<mapping_1575030853128 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="[text/html,application/vnd.adobe.contentfragment]" droptarget="contentfragment" resourceType="bt-sample-project/components/contentfragment"/>
+</assetToComponentMapping>
+</cq:authoring>
+</policy_1574694950110>
+<policy_1574695586800 jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)." jcr:lastModified="{Date}2024-05-06T17:51:02.773+05:30" jcr:lastModifiedBy="admin" jcr:primaryType="nt:unstructured" jcr:title="Right Policy" sling:resourceType="wcm/core/components/policy/policy" components="[group:bt-practice - Content,/apps/bt-sample-project/components/form/container]" layoutDisabled="false">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+<cq:authoring jcr:primaryType="nt:unstructured">
+<assetToComponentMapping jcr:primaryType="nt:unstructured">
+<mapping_1575030255082 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="image/*" droptarget="image" resourceType="bt-sample-project/components/image"/>
+<mapping_1575030260142 jcr:primaryType="nt:unstructured" assetGroup="content" assetMimetype="text/html" droptarget="experiencefragment" resourceType="bt-sample-project/components/experiencefragment"/>
+<mapping_1575030269139 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="[text/html,application/vnd.adobe.contentfragment]" droptarget="contentfragment" resourceType="bt-sample-project/components/contentfragment"/>
+</assetToComponentMapping>
+</cq:authoring>
+</policy_1574695586800>
+<policy_649128221558427 cq:styleDefaultElement="main" jcr:description="Sets a &lt;main> element on the page content area." jcr:primaryType="nt:unstructured" jcr:title="Page Main" sling:resourceType="wcm/core/components/policy/policy">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+</policy_649128221558427>
+<policy_1575040440977 jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)." jcr:primaryType="nt:unstructured" jcr:title="XF Root" sling:resourceType="wcm/core/components/policy/policy" components="[group:bt-practice - Content,/apps/bt-sample-project/components/form/container]">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+<cq:authoring jcr:primaryType="nt:unstructured">
+<assetToComponentMapping jcr:primaryType="nt:unstructured">
+<mapping_1575024218483 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="image/*" droptarget="image" resourceType="bt-sample-project/components/image"/>
+<mapping_1575030843388 jcr:primaryType="nt:unstructured" assetGroup="content" assetMimetype="text/html" droptarget="experiencefragment" resourceType="bt-sample-project/components/experiencefragment"/>
+<mapping_1575030853128 jcr:primaryType="nt:unstructured" assetGroup="media" assetMimetype="[text/html,application/vnd.adobe.contentfragment]" droptarget="contentfragment" resourceType="bt-sample-project/components/contentfragment"/>
+</assetToComponentMapping>
+</cq:authoring>
+</policy_1575040440977>
+<policy_1031425916664600 jcr:lastModified="{Date}2024-05-06T17:55:52.515+05:30" jcr:lastModifiedBy="admin" jcr:primaryType="nt:unstructured" jcr:title="Left Policy" sling:resourceType="wcm/core/components/policy/policy" components="group:bt-practice - Content" layoutDisabled="false">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+</policy_1031425916664600>
+<policy_1031564342804800 jcr:lastModified="{Date}2024-05-06T17:52:12.702+05:30" jcr:lastModifiedBy="admin" jcr:primaryType="nt:unstructured" jcr:title="Center Policy" sling:resourceType="wcm/core/components/policy/policy" components="[group:Address]" layoutDisabled="false">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+</policy_1031564342804800>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -329,15 +368,22 @@
                 </policy_1575032193319>
             </download>
             <page jcr:primaryType="nt:unstructured">
-                <policy
-                    jcr:description="Includes the required client libraries."
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="Generic Page"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[bt-sample-project.dependencies,bt-sample-project.site]"
-                    clientlibsJsHead="bt-sample-project.dependencies">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                </policy>
+              <policy cq:styleDefaultClasses="default" jcr:description="Includes the required client libraries." jcr:primaryType="nt:unstructured" jcr:title="Generic Page" sling:resourceType="wcm/core/components/policy/policy" clientlibs="[bt-sample-project.dependencies,bt-sample-project.site]" clientlibsAsync="false" clientlibsJsHead="bt-sample-project.dependencies" mainContentSelector="skip main" renderAlternateLanguageLinks="true">
+<jcr:content jcr:primaryType="nt:unstructured"/>
+<cq:styleGroups jcr:primaryType="nt:unstructured">
+<item0 cq:styleGroupLabel="Test Styles" jcr:primaryType="nt:unstructured">
+<cq:styles jcr:primaryType="nt:unstructured">
+<item0 cq:styleClasses="black" cq:styleId="1714992853936" cq:styleLabel="background colour" jcr:primaryType="nt:unstructured"/>
+<item1 cq:styleClasses="red" cq:styleId="1714992870513" cq:styleLabel="background colour" jcr:primaryType="nt:unstructured"/>
+</cq:styles>
+</item0>
+<item1 cq:styleGroupLabel="Full Width" jcr:primaryType="nt:unstructured">
+<cq:styles jcr:primaryType="nt:unstructured">
+<item0 cq:styleClasses="seventy-five-25" cq:styleId="1714992895044" cq:styleLabel="75/25" jcr:primaryType="nt:unstructured"/>
+</cq:styles>
+</item1>
+</cq:styleGroups>
+</policy>
             </page>
         </components>
     </bt-sample-project>
