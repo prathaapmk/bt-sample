@@ -1,0 +1,41 @@
+
+
+<h1> Image Component Adding Via Data sly resource</h1>
+<div data-sly-resource="${'xyz' @ resourceType='bt-sample-project/components/image'}"> </div>
+
+
+<h1> Button Component Adding Via Data sly resource</h1>
+<div data-sly-resource="${'button1' @ resourceType='/apps/bt-sample-project/components/button'}"> </div>
+
+<div data-sly-resource="${'button2' @ resourceType='/apps/bt-sample-project/components/button'}"> </div>
+
+helooo${properties.listFrom}
+<sly data-sly-test="${properties.listFrom == 'variation1'}">
+
+<sly data-sly-include="variation1.html"></sly>
+
+</sly>
+
+<sly data-sly-test="${properties.listFrom == 'variation2'}">
+
+<sly data-sly-include="variation2.html"></sly>
+
+</sly>
+
+
+
+<h1> Learning Data Sly List vs Repeat</h1>
+<div style="background-color:black">
+<ul data-sly-repeat.object=${currentPage.listChildren}>
+<li data-sly-test=${objectList.first}>
+${object.name} :::: ${object.title}:::${objectList.count}:::${objectList.index}:::First
+</li>
+<li data-sly-test=${objectList.odd}>
+${object.name} :::: ${object.title}:::${objectList.count}:::${objectList.index}
+</li>
+<li data-sly-test=${objectList.last}>
+${object.name} :::: ${object.title}:::${objectList.count}:::${objectList.index}:::Last
+</li>
+</ul>
+
+</div>
