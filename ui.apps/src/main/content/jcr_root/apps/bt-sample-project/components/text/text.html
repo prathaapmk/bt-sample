@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text}"></sly>
+
+<div>${properties.text @context='html'}</div>
+
+<h1 style="color:${'#0000FF' @context='styleToken'};font-style:${'italic' @context='styleToken'};font-family:${'Brush Script MT,Arial,Helvetica' @context='styleString'}">This is Color</h1>
+
+
+<script>
+
+function methodforContext()
+{
+var variable1 = "${'test heloo data' @context='scriptString'}";
+alert("Heloo i am from javascript "+variable1);
+}
+
+</script>
+
+<input type="button" onclick="${'methodforContext' @context='scriptToken'}()" value="Submit"/>
+
+
+<h6 data-sly-element="${'h1' @context='elementName'}">Title Text</h6>
+
+
+<sly data-sly-use.button="/apps/bt-sample-project/components/text/index.html"></sly>
+
+<div data-sly-call="${button.ctaButton @ ctaText= properties.text, ctaLink='https://www.google.com'}">
+</div>
+
+${component.name} <br>
+ ${component.componentGroup} <br>
+ ${component.title}<br>
+ ${componentContext.page.title}<br>
+ ${currentDesign.path}<br>
+Node:::::::::::${currentNode.path}<br>
+${currentPage.path}<br>
+${resource.path}<br>
+${resourcePage.path}<br>
+${resourceDesign.path}<br>
+WCMMODE : EDIT ${wcmmode.edit}<br>
+WCMMODE : Preview ${wcmmode.preview}<br>
+WCMMODE : Disabled  ${wcmmode.disabled}<br>
+
