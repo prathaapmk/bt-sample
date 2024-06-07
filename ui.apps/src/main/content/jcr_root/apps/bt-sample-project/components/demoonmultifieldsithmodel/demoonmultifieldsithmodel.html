@@ -1,0 +1,23 @@
+<h2> List of States</h2>
+
+<sly data-sly-use.multiModel="com.bt.sample.core.models.MultiFeildDemoModel"></sly>
+<ul data-sly-list="${multiModel.states}">
+<li>
+State: ${item}
+</li>
+</ul>
+
+<h2>List of Countries and Currencies</h2>
+<ul data-sly-list="${multiModel.multicurandcountry}">
+<li>${item.country}:::: ${item.currency}
+</li>
+</ul>
+
+<!--/* 
+
+Cq:Dialog 
+
+List of States ---- MultiField -- Array of Strings
+List of Countries with Currency- Multi Multi/ Multi Composite Field - Child Resource - List of Maps
+
+ */-->
