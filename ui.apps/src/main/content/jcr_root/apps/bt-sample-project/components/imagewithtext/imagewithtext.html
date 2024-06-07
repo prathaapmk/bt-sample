@@ -1,53 +1,19 @@
+<h1> Helooo </h1>
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" >
 
-<style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title && !properties.text}"></sly>
+</sly>
 
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-</style>
-
-
-<h2>${properties.title}</h2>
-<p>${properties.text @context='html'}</p>
+<sly data-sly-use.model="com.bt.sample.core.models.ImageWithTextModel"></sly>
+<h2>${model.title}</h2>
+<p>${model.text @context='html'}</p>
 
 <div class="container">
-  <img src="${properties.path}" alt="Snow" style="width:100%;">
-  <div class="bottom-left">${properties.bottomlefttext}</div>
-  <div class="top-left">${properties.toplefttext}</div>
-  <div class="top-right">${properties.toprighttext}</div>
-  <div class="bottom-right">${properties.bottomrighttext}</div>
-  <div class="centered">${properties.centeredtext}</div>
+  <img src="${model.path}" alt="Snow" style="width:100%;">
+  <div class="bottom-left">${model.bottomlefttext}</div>
+  <div class="top-left">${model.toplefttext}</div>
+  <div class="top-right">${model.toprighttext}</div>
+  <div class="bottom-right">${model.bottomrighttext}</div>
+  <div class="centered">${model.centeredtext}</div>
 </div>
 
