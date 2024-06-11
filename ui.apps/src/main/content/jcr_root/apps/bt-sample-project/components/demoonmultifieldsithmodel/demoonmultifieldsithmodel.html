@@ -1,6 +1,6 @@
 <h2> List of States</h2>
 
-<sly data-sly-use.multiModel="com.bt.sample.core.models.MultiFeildDemoModel"></sly>
+<sly data-sly-use.multiModel="${com.bt.sample.core.models.MultiFeildDemoModel @ value1='Heloo',value2='Test'}"></sly>
 <ul data-sly-list="${multiModel.states}">
 <li>
 State: ${item}
