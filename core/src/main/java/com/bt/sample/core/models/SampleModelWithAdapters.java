@@ -38,7 +38,6 @@ public class SampleModelWithAdapters implements SampleInterface{
 	
 	private String pageTitle;
 	
-
 	@Override
 	public String getPath() {
 		return path;
@@ -63,17 +62,18 @@ public class SampleModelWithAdapters implements SampleInterface{
 		/// By Using Sling 
 		
 		String paths[] = slingHttpServletRequest.getPathInfo().split(".html");
-		
+
 		Resource currentPagePath = resourceResolver.getResource(paths[0].concat("/jcr:content"));
-		
+
 		ValueMap vm = currentPagePath.adaptTo(ValueMap.class);
 		pageTitle = vm.get("jcr:title", String.class);
-		
+
 		//// By Using AEM
-		
+
 		PageManager pm = resourceResolver.adaptTo(PageManager.class);
 		Page page = pm.getPage(paths[0]);
 		pageTitle = page.getPageTitle();
+		 
 		
 		
 	}

@@ -22,15 +22,12 @@ import org.slf4j.LoggerFactory;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
-import lombok.Getter;
-
 /*
  * Documentation for SLing Models
 //https://sling.apache.org/documentation/bundles/models.html
 */
 @Model(adaptables = SlingHttpServletRequest.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,resourceType = "/apps/bt-sample-project/components/demoonmultifieldsithmodel")
 @Exporter(name="jackson",extensions = "json")
-@Getter
 public class MultiFeildDemoModel {
 
     final Logger logger = LoggerFactory.getLogger(getClass());
@@ -64,19 +61,18 @@ public class MultiFeildDemoModel {
 	  @PostConstruct public void init() { 
 		  logger.
 	  info("I am executing after the Inject/ValueMapvalue and RequestAttrbutes");
-	String str=  slingHttpServletRequest.getPathInfo();
-	  //By Using Resource API
-	String path1[]= str.split(".html");
-	Resource r = rr.getResource(path1[0].concat("/jcr:content"));
-	
-	ValueMap pageValues = r.adaptTo(ValueMap.class);
-	
-	String pageTitle = pageValues.get("jcr:title",String.class);
-	//BY Using Page API
-	
-	PageManager pm = rr.adaptTo(PageManager.class);
-	Page p = pm.getPage(path1[0]);
-	String s = p.getTitle();
+			
+			  String str= slingHttpServletRequest.getPathInfo(); //By Using Resource API
+			  String path1[]= str.split(".html"); Resource r =
+			  rr.getResource(path1[0].concat("/jcr:content"));
+			  
+			  ValueMap pageValues = r.adaptTo(ValueMap.class);
+			  
+			  String pageTitle = pageValues.get("jcr:title",String.class); //BY Using Page API
+			  
+			  PageManager pm = rr.adaptTo(PageManager.class); Page p =
+			  pm.getPage(path1[0]); String s = p.getTitle();
+			 
 	  
 	  logger.info("Completed the Init Method");
 	  
@@ -91,6 +87,14 @@ public class MultiFeildDemoModel {
 	 * adapters= if you want to use Interafce
 	 * @Default
 	 */
+
+	public String[] getStates() {
+		return states;
+	}
+
+	public List<CountrywithCurrencies> getMulticurandcountry() {
+		return multicurandcountry;
+	}
 	
 	
 }
