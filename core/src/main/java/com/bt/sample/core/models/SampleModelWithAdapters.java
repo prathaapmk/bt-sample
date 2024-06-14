@@ -8,10 +8,12 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+import com.bt.sample.core.services.MyFirstServicePrintLog;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
@@ -23,6 +25,9 @@ public class SampleModelWithAdapters implements SampleInterface{
 	
 	@ValueMapValue
 	private String sampleTextArea;
+	
+	@OSGiService  //@Inject
+	MyFirstServicePrintLog myFirstServicePrintLog;
 	
 	@Self
 	SlingHttpServletRequest slingHttpServletRequest;
@@ -40,6 +45,8 @@ public class SampleModelWithAdapters implements SampleInterface{
 	private String pageTitleViaSling;
 	
 	private String pageTitleViaAEM;
+	
+	private String stringFromService;
 	
 	@Override
 	public String getPath() {
@@ -62,7 +69,11 @@ public class SampleModelWithAdapters implements SampleInterface{
 	public void init()
 	{
 		
+		// Assinging via Sling Model
+		stringFromService = myFirstServicePrintLog.PrintLog();
+		
 		/// By Using Sling 
+		
 		
 		String paths[] = slingHttpServletRequest.getPathInfo().split(".html");
 
@@ -87,6 +98,10 @@ public class SampleModelWithAdapters implements SampleInterface{
 
 	public String getPageTitleViaAEM() {
 		return pageTitleViaAEM;
+	}
+
+	public String getStringFromService() {
+		return stringFromService;
 	}
 
 	
