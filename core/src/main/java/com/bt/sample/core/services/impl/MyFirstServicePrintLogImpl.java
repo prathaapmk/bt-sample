@@ -4,9 +4,11 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.bt.sample.core.services.GetPathService;
 import com.bt.sample.core.services.MyFirstServicePrintLog;
 
 @Component(service = MyFirstServicePrintLog.class,immediate = true)
@@ -14,10 +16,13 @@ public class MyFirstServicePrintLogImpl implements MyFirstServicePrintLog{
 
 	final Logger logger = LoggerFactory.getLogger(getClass());
 	
+	@Reference(target = "(component.name=com.bt.sample.core.services.impl.GetAssetPathServiceImpl1)")
+	GetPathService getPathService;
+	
 	@Override
 	public String PrintLog() {
 		logger.info("I am from Service");
-		return "Some String from a Service";
+		return getPathService.getPathOfTheAsset();
 	}
 	
 	@Activate 
