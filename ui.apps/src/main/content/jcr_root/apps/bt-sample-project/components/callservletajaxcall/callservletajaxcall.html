@@ -1,0 +1,39 @@
+<h1> Calling a Servlet can be done in 2 ways,  here i am showing via a click button via ajax/js code</h1>
+
+
+<input value="${resource.getPath}" hidden id="servletPath" />
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="response"></div>
+    
+    
+<script>
+function fetchData() {
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+var url = document.getElementById("servletPath").value+".txt";
+console.log("url Value"+url);
+    // Configure it: GET-request for the URL /path/to/data
+    xhr.open('GET', url, true);
+
+    // Setup a function to handle the response
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Success! Handle the response data here
+            console.log(xhr.responseText);
+            // Example: Update HTML content with the response
+            document.getElementById('response').textContent = xhr.responseText;
+        } else {
+            // We reached our target server, but it returned an error
+            console.log('Request failed with status:', xhr.status);
+        }
+    };
+
+    // Handle network errors
+    xhr.onerror = function () {
+        console.error('Network request failed');
+    };
+
+    // Send the request
+    xhr.send();
+}
+</script>
