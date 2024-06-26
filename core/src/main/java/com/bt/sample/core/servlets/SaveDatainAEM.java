@@ -1,8 +1,6 @@
 package com.bt.sample.core.servlets;
 
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Objects;
 
 import javax.servlet.Servlet;
@@ -13,11 +11,15 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.ModifiableValueMap;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.bt.sample.core.services.ReadDummyJson;
+import com.bt.sample.core.utils.CommonUtils;
 
 @Component(service = Servlet.class, property = { "sling.servlet.paths=/bin/practice", 
 		"sling.servlet.resourceTypes=/apps/bt-sample-project/components/callservletajaxcall" ,
@@ -27,13 +29,26 @@ public class SaveDatainAEM extends SlingSafeMethodsServlet {
 
 	@Reference
 	ReadDummyJson readDummyJson;
+	
+	@Reference
+	ResourceResolverFactory resolverFactory;
 
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
 
-		ResourceResolver resourceresolver = request.getResourceResolver();
+		//ResourceResolver resourceresolver = CommonUtils.getReadResolver();
+				//request.getResourceResolver();
+		
+		final Logger log = LoggerFactory.getLogger(getClass());
 		try {
 
+			ResourceResolver resourceresolver = CommonUtils.getWriteResolver(resolverFactory);
+					//request.getResourceResolver();
+					
+					//CommonUtils.getReadResolver();
+					//
+					//CommonUtils.getReadResolver();
+			log.info(resourceresolver.getUserID());
 			// Getting the Data from 3rd Party APi via a Service
 			String jsonfromService = readDummyJson.getDatafromDummyJsonApi();
 
