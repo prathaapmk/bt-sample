@@ -1,0 +1,7 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "user.mapping":[
+    "bt-sample-project.core:readService=[read-user]",
+    "bt-sample-project.core:writeService=[write-user]"
+  ]
+}

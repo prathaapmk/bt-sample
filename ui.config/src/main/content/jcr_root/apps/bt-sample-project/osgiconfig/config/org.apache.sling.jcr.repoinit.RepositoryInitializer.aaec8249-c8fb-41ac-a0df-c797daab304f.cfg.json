@@ -1,0 +1,8 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "scripts":[
+    "create service user read-user,write-user",
+    "set ACL for write-user \r\nallow jcr:read,jcr:write on /content/bt-sample-project/data \r\nallow jcr:read on /conf/aem \r\nallow jcr:read on /apps \r\nend",
+    "set ACL for read-user \r\nallow jcr:read on /content/bt-sample-project/data \r\nallow jcr:read on /conf/aem \r\nallow jcr:read on /apps \r\nend"
+  ]
+}
