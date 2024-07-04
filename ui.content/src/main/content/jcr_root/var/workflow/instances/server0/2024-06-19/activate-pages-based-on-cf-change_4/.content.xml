@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Workflow"
+    jcr:uuid="0f78ca0e-1746-424e-bf71-7c838e9f41c1"
+    endTime="{Date}2024-07-04T08:40:04.313+05:30"
+    initiator="workflow-service"
+    modelId="/var/workflow/models/activate-pages-based-on-cf-change"
+    modelVersion="1.2"
+    parentInstanceId="none"
+    startTime="{Date}2024-07-04T08:40:04.223+05:30"
+    status="COMPLETED">
+    <data jcr:primaryType="cq:WorkflowData">
+        <metaData
+            cq:userMetaDataCustomPersistenceEnabled="{Boolean}false"
+            cq:waitingToAdvance="{Boolean}false"
+            jcr:primaryType="nt:unstructured"
+            currentJobs="\0"
+            launcherId="/conf/global/settings/workflow/launcher/config/-2060848661"
+            userId="admin"/>
+        <payload
+            jcr:primaryType="cq:Payload"
+            path="{Path}/content/dam/bt-sample-project/sample-cf-test/jcr:content/data/master"/>
+    </data>
+    <history jcr:primaryType="nt:unstructured">
+        <_x0035_4fd129b-5379-4b4a-a9dd-a77d3e50e88b
+            jcr:primaryType="nt:unstructured"
+            date="{Date}2024-07-04T08:40:04.231+05:30"
+            event="WorkflowCompleted"
+            message="\0"
+            user="workflow-service">
+            <workItem
+                jcr:primaryType="cq:WorkItem"
+                assignee="system"
+                endTime="{Date}2024-07-04T08:40:04.231+05:30"
+                nodeId="node0"
+                startTime="{Date}2024-07-04T08:40:04.230+05:30"
+                workflowId="/var/workflow/instances/server0/2024-06-19/activate-pages-based-on-cf-change_4">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    archived="{Boolean}true"/>
+            </workItem>
+        </_x0035_4fd129b-5379-4b4a-a9dd-a77d3e50e88b>
+        <_x0030_640f816-0cc8-4025-9a1a-4e9b5f5c302e
+            jcr:primaryType="nt:unstructured"
+            date="{Date}2024-07-04T08:40:04.312+05:30"
+            event="WorkflowCompleted"
+            message="\0"
+            user="workflow-service">
+            <workItem
+                jcr:primaryType="cq:WorkItem"
+                assignee="system"
+                endTime="{Date}2024-07-04T08:40:04.312+05:30"
+                nodeId="node1"
+                startTime="{Date}2024-07-04T08:40:04.263+05:30"
+                workflowId="/var/workflow/instances/server0/2024-06-19/activate-pages-based-on-cf-change_4">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    archived="{Boolean}true"
+                    historyEntryPath="/var/workflow/instances/server0/2024-06-19/activate-pages-based-on-cf-change_4/history/54fd129b-5379-4b4a-a9dd-a77d3e50e88b"/>
+            </workItem>
+        </_x0030_640f816-0cc8-4025-9a1a-4e9b5f5c302e>
+    </history>
+    <metaData
+        cq:userMetaDataCustomPersistenceEnabled="{Boolean}false"
+        jcr:primaryType="nt:unstructured"
+        currentJobs="\0"
+        launcherId="/conf/global/settings/workflow/launcher/config/-2060848661"
+        userId="admin"/>
+    <workItems jcr:primaryType="nt:unstructured"/>
+</jcr:root>

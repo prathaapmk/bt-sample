@@ -2,6 +2,7 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/bt-sample-project" mode="merge"/>
     <filter root="/content/bt-sample-project" mode="merge"/>
+     <filter root="/var/workflow" mode="merge"/>
     <filter root="/content/dam/bt-sample-project" mode="merge">
         <exclude pattern="/content/dam/bt-sample-project(/.*)?"/>
         <include pattern="/content/dam/bt-sample-project/jcr:content(/.*)?"/>
