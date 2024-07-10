@@ -235,12 +235,12 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1574694950110>
-                <left_container_policy
+               <left_container_policy
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Left Container policy"
+                    jcr:title="Left Container Policy "
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[/apps/bt-sample-project/components/form/container]"
+                    components="[group:bt-practice - Content,/apps/bt-sample-project/components/form/container]"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -342,6 +342,14 @@
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_3634255370818600>
+                 <right_container_policy
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Right Container Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/bt-sample-project/components/container,/apps/bt-sample-project/components/form/button,/apps/bt-sample-project/components/form/text]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </right_container_policy>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -368,9 +376,11 @@
                 </policy_1575032193319>
             </download>
             <page jcr:primaryType="nt:unstructured">
-                <policy
+                 <policy
                     cq:styleDefaultClasses="default-class-edit-template"
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2024-07-10T00:06:48.395+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -386,23 +396,28 @@
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
                                     cq:styleClasses="black"
-                                    cq:styleId="1714704850725"
-                                    cq:styleLabel="Backround Black Color"
+                                    cq:styleId="1720549572311"
+                                    cq:styleLabel="Background Black Color"
                                     jcr:primaryType="nt:unstructured"/>
                                 <item1
-                                    cq:styleClasses="red"
-                                    cq:styleId="1714704865656"
-                                    cq:styleLabel="Backround Red Color"
+                                    cq:styleClasses="rsd"
+                                    cq:styleId="1720549632668"
+                                    cq:styleLabel="Background Red colour"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="white"
+                                    cq:styleId="1720549690694"
+                                    cq:styleLabel="Background Whie Colour"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
                         <item1
-                            cq:styleGroupLabel="Full Width"
+                            cq:styleGroupLabel="Full WIdth"
                             jcr:primaryType="nt:unstructured">
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
                                     cq:styleClasses="seventy-five-25"
-                                    cq:styleId="1714704902952"
+                                    cq:styleId="1720549735610"
                                     cq:styleLabel="75/25"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>

@@ -3,12 +3,14 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2024-05-03T08:41:17.588+05:30"
+        cq:lastModified="{Date}2024-07-10T00:42:20.071+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/bt-sample-project/settings/wcm/templates/product-page-template"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="bt-sample-project/components/page">
         <root
+            jcr:lastModified="{Date}2024-07-10T00:30:55.833+05:30"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bt-sample-project/components/container"
             layout="responsiveGrid">
@@ -19,19 +21,18 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bt-sample-project/components/container"
-                editable="{Boolean}true"
-                layout="responsiveGrid">
+                editable="{Boolean}true">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
-                        offset="2"
-                        width="5"/>
+                        offset="0"
+                        width="6"/>
                 </cq:responsive>
             </container>
-            <container_64005615
-                jcr:created="{Date}2024-05-03T08:09:18.882+05:30"
+            <container_502202638
+                jcr:created="{Date}2024-07-09T23:34:34.634+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2024-05-03T08:09:18.882+05:30"
+                jcr:lastModified="{Date}2024-07-09T23:34:34.634+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bt-sample-project/components/container"
@@ -40,21 +41,21 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         offset="0"
-                        width="4"/>
+                        width="6"/>
                 </cq:responsive>
-            </container_64005615>
-            <container_560332994
-                jcr:created="{Date}2024-05-03T08:34:31.895+05:30"
+            </container_502202638>
+            <container_402200479
+                jcr:created="{Date}2024-07-10T00:29:11.325+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2024-05-03T08:34:31.895+05:30"
+                jcr:lastModified="{Date}2024-07-10T00:29:11.325+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bt-sample-project/components/container"
                 editable="{Boolean}true"/>
             <image
-                jcr:created="{Date}2024-05-03T08:40:01.246+05:30"
+                jcr:created="{Date}2024-07-10T00:39:51.609+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2024-05-03T08:40:32.419+05:30"
+                jcr:lastModified="{Date}2024-07-10T00:40:26.640+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bt-sample-project/components/image"
