@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2024-05-03T08:40:32.425+05:30"
+        cq:lastModified="{Date}2024-07-10T00:40:26.646+05:30"
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/bt-sample-project/settings/wcm/template-types/page"
         jcr:description="Product Page Template Description"
