@@ -14,7 +14,7 @@
                 <items jcr:primaryType="nt:unstructured">
                     <tab1
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Tab 1"
+                        jcr:title="Tab1"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -30,14 +30,15 @@
                                             <sampleTextArea
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                                fieldDescription="Enter the Text area to display on the page"
+                                                cols="{Long}7"
+                                                fieldDescription="Enter The Text area to display on the Page"
                                                 fieldLabel="Sample Text"
-                                                name="./sampleTextArea"
+                                                name="./SampleText Area"
                                                 rows="{Long}3"/>
                                             <text
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                                fieldLabel="Rich Text Sample"
+                                                fieldLabel="Rich Text"
                                                 name="./text"
                                                 useFixedInlineToolbar="{Boolean}true">
                                                 <rtePlugins jcr:primaryType="nt:unstructured">
@@ -163,7 +164,7 @@
                     </tab1>
                     <tab2
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Tab 2"
+                        jcr:title="Tab2"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -186,13 +187,20 @@
                                                 fileReferenceParameter="./fileReference"
                                                 mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
                                                 name="./file"/>
-                                            <path
+                                            <samplepathfield
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldDescription="Enter the Text area to display on the page"
-                                                fieldLabel="Sample Path field"
-                                                name="./path"
-                                                rootPath="/content/bt-sample-project"/>
+                                                fieldDescription="Select Valid Path "
+                                                fieldLabel="Sample Path Field"
+                                                name="./SamplePathField"
+                                                rootPath="/content"/>
+                                            <id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="HTML ID attribute to apply to the component."
+                                                fieldLabel="ID"
+                                                name="./id"
+                                                validation="html-unique-id-validator"/>
                                         </items>
                                     </column>
                                 </items>
@@ -201,7 +209,7 @@
                     </tab2>
                     <tab3
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Tab 3"
+                        jcr:title="Tab3"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -214,12 +222,12 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <samplecheckBox
+                                            <sampleCheckbox
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                fieldDescription="Enter the Text area to display on the page"
+                                                fieldDescription="Select the Check Box"
                                                 fieldLabel="Sample Check Box"
-                                                name="./sampleCheckBox"
+                                                name="./SampleCheckbox"
                                                 text="Select the Check Box"
                                                 value="{Boolean}true"/>
                                             <listFrom
@@ -227,6 +235,9 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
                                                 fieldLabel="Build List Using"
                                                 name="./listFrom">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
                                                 <items jcr:primaryType="nt:unstructured">
                                                     <children
                                                         granite:hide="${cqDesign.disableChildren}"
@@ -271,11 +282,46 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
+                                            <sampleDatePicker
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                fieldDescription="Pick the Date"
+                                                fieldLabel="Sample Date Picker"
+                                                name="./SampleDatePicker"/>
+                                            <sampleTagPicker
+                                                jcr:primaryType="nt:unstructured"
+                                                fieldDescription="Pick the Date"
+                                                fieldLabel="Sample Date Picker"
+                                                name="./SampleTagPicker"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </tab4>
+                    <tab5
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 5"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
                                             <selectRadioButton
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
                                                 fieldLabel="Select any Radio Button here"
                                                 name="./selectRadio">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
                                                 <items jcr:primaryType="nt:unstructured">
                                                     <children
                                                         jcr:primaryType="nt:unstructured"
@@ -306,15 +352,13 @@
                                                 <field
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                    fieldLabel="Enter the Texts what you want"
-                                                    name="./mutitext"
-                                                    text="Enter the Texts what you want"/>
+                                                    name="./multitext"/>
                                             </multifieldDemo>
-                                            <multiButtons
+                                            <multibuttons
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                                 composite="true"
-                                                fieldLabel="Multi Composite field Demo">
+                                                fieldLabel="Multi Composit field Demo">
                                                 <field
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/container"
@@ -327,27 +371,27 @@
                                                                 <ctaLink
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
-                                                                    fieldDescription="Enter the Text area to display on the page"
+                                                                    fieldDescription="Enter The Text area to display on the Page"
                                                                     fieldLabel="CTA Link"
                                                                     name="ctaLink"
                                                                     rootPath="/content/bt-sample-project"/>
                                                                 <ctaText
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                                    fieldDescription="Enter the Text area to display on the page"
+                                                                    fieldDescription="Enter The Text area to display on the Page"
                                                                     fieldLabel="CTA Text"
                                                                     name="ctaText"/>
                                                             </items>
                                                         </column>
                                                     </items>
                                                 </field>
-                                            </multiButtons>
+                                            </multibuttons>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </tab4>
+                    </tab5>
                 </items>
             </tabs>
         </items>
