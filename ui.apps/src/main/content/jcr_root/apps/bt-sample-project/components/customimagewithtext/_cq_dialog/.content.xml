@@ -13,14 +13,15 @@
                                     <column jcr:primaryType="nt:unstructured">
                                         <items
                                             jcr:primaryType="nt:unstructured"
-                                            sling:hideChildren="[samplecheckBox]">
+                                            sling:hideChildren="[sampleCheckbox]">
                                             <sampleTextArea
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:orderBefore="file"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                                fieldDescription="Enter the Text area to display on the page"
+                                                cols="{Long}7"
+                                                fieldDescription="Enter The Text area to display on the Page"
                                                 fieldLabel="Sample Text"
-                                                name="./sampleTextArea"
+                                                name="./SampleTextArea"
                                                 rows="{Long}3"/>
                                         </items>
                                     </column>
