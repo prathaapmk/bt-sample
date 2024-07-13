@@ -425,9 +425,11 @@
                     </cq:styleGroups>
                 </policy>
             </page>
-            <verify-edit-config-imagewithtext jcr:primaryType="nt:unstructured">
-                <policy_1715741727570
-                    cq:styleDefaultClasses="green"
+             <verify-edit-config-imagewithtext jcr:primaryType="nt:unstructured">
+                <policy_1720874191974
+                    cq:styleDefaultClasses="default-class-added"
+                    jcr:lastModified="{Date}2024-07-13T18:09:01.650+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Style Systems Demo"
                     sling:resourceType="wcm/core/components/policy/policy">
@@ -490,12 +492,12 @@
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
                                     cq:styleClasses="red"
-                                    cq:styleId="1715741773825"
+                                    cq:styleId="1720874263784"
                                     cq:styleLabel="Red"
                                     jcr:primaryType="nt:unstructured"/>
                                 <item1
                                     cq:styleClasses="blue"
-                                    cq:styleId="1715741786334"
+                                    cq:styleId="1720874270396"
                                     cq:styleLabel="Blue"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
@@ -506,18 +508,18 @@
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
                                     cq:styleClasses="text-red"
-                                    cq:styleId="1715741804476"
+                                    cq:styleId="1720874294288"
                                     cq:styleLabel="Red"
                                     jcr:primaryType="nt:unstructured"/>
                                 <item1
                                     cq:styleClasses="text-blue"
-                                    cq:styleId="1715741818544"
+                                    cq:styleId="1720874319429"
                                     cq:styleLabel="Blue"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item1>
                     </cq:styleGroups>
-                </policy_1715741727570>
+                </policy_1720874191974>
             </verify-edit-config-imagewithtext>
         </components>
     </bt-sample-project>

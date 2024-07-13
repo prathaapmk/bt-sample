@@ -14,7 +14,7 @@
                 <items jcr:primaryType="nt:unstructured">
                     <tab1
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Tab 1"
+                        jcr:title="Tab1"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -37,12 +37,12 @@
                                                 fileReferenceParameter="./fileReference"
                                                 mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
                                                 name="./file"/>
-                                            <samplecheckBox
+                                            <sampleCheckbox
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                fieldDescription="Enter the Text area to display on the page"
+                                                fieldDescription="Select the Check Box"
                                                 fieldLabel="Sample Check Box"
-                                                name="./sampleCheckBox"
+                                                name="./SampleCheckbox"
                                                 text="Select the Check Box"
                                                 value="{Boolean}true"/>
                                         </items>
