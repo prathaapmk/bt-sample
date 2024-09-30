@@ -428,8 +428,6 @@
              <verify-edit-config-imagewithtext jcr:primaryType="nt:unstructured">
                 <policy_1720874191974
                     cq:styleDefaultClasses="default-class-added"
-                    jcr:lastModified="{Date}2024-07-13T18:09:01.650+05:30"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Style Systems Demo"
                     sling:resourceType="wcm/core/components/policy/policy">
