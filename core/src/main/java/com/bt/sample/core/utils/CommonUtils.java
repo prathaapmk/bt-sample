@@ -27,6 +27,15 @@ public final class CommonUtils {
 		ResourceResolver resolver = resolverFactory.getServiceResourceResolver(param);
 		return resolver;
 	}
+	
+	public static ResourceResolver getupdateResolver(ResourceResolverFactory resolverFactory) throws LoginException
+	{
+		
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put(ResourceResolverFactory.SUBSERVICE, "updateservice");
+		ResourceResolver resolver = resolverFactory.getServiceResourceResolver(param);
+		return resolver;
+	}
 
 	
 }

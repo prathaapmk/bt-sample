@@ -1,0 +1,30 @@
+
+    <h1>Update Email in Child Pages</h1>
+
+    <input type="text" id="newEmail" placeholder="Enter new email...">
+    <button onclick="updateEmail()">Update Emails</button>
+    <div id="response"></div>
+    
+    <script>
+        function updateEmail() {
+            var newEmail = document.getElementById("newEmail").value;
+            var servletUrl = "/bin/updateemail";
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", servletUrl, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('response').textContent = xhr.responseText;
+                    } else {
+                        console.error('Error updating emails:', xhr.status);
+                        document.getElementById('response').textContent = 'Error updating emails. Please try again.';
+                    }
+                }
+            };
+
+            xhr.send("newEmail=" + encodeURIComponent(newEmail));
+        }
+    </script>
