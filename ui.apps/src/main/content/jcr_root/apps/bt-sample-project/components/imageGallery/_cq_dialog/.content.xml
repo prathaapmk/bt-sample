@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="&#xa;Responsive Image Gallery"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <tab4
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 4"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <imgGallery
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="true"
+                                                fieldLabel="Image Gallery">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./imageGallery">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <imgPath
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                    fieldDescription="Enter the image to display on the page"
+                                                                    fieldLabel="Image Path"
+                                                                    name="imgpath"
+                                                                    rootPath="/content/dam/bt-sample-project"/>
+                                                                <imgDesc
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldDescription="Enter the Text area to display on the page"
+                                                                    fieldLabel="Image Desc"
+                                                                    name="imgDesc"/>
+                                                                <imgText
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldDescription="Enter the Text area to display on the page"
+                                                                    fieldLabel="Image Text"
+                                                                    name="imgText"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </imgGallery>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </tab4>
+                    <tab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <imgTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Enter the title to display on the page"
+                                                fieldLabel="Image Title"
+                                                name="./imgTitle"/>
+                                            <imgTitleDesc
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Enter the title desc to display on the page"
+                                                fieldLabel="Description"
+                                                name="./imgTitleDesc"/>
+                                            <compDesc
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldDescription="Enter the description to display on the page"
+                                                fieldLabel="Component Description"
+                                                name="./compDesc"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </tab1>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

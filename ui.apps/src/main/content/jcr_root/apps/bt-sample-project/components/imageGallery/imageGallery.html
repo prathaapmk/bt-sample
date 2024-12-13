@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>${properties.imgTitle}</h2>
+
+<h4>${properties.imgTitleDesc}</h4>
+
+<div class="responsive">
+  <div class="gallery">
+  <sly data-sly-list.items="${resource.getChildren}">
+  <!-- Outer loop for direct children -->
+    <sly data-sly-list.nestedItem="${items.getChildren}">
+    <!-- Inner loop for nested children -->
+    <a target="_blank" href="${nestedItem.imgpath}">
+      <img src="${nestedItem.imgpath}" alt="${nestedItem.imgText}" width="600" height="400">
+    </a>
+       <div class="desc">${nestedItem.imgDesc}</div>
+   </sly>
+   </sly>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p> ${properties.compDesc} </p>
+</div>
+
+</body>
+</html>
+
+
